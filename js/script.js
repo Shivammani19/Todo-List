@@ -1,4 +1,13 @@
 $(() => {
+var userName = prompt("Enter Your Name")
+alert("Nice to meet you," + userName)
+console.log("Also great to meet you, " + userName)
+
+$("help").click(function()
+  {
+    alert("Read Me")
+  })
+
   let inpNewTask = $('#inpNewTask')
 
   let tasks = []
@@ -25,7 +34,7 @@ $(() => {
           )
           .append(
             $('<button>')
-            .text(task.done ? "❌" : "✔️" )
+            .html(task.done ? '<i class="fas fa-times-circle"></i>' : '<i class="fas fa-check"></i>')
             .attr('class', "btn btn-outline-success col-0 mx-0")
             .click(function () {
               task.done = !task.done
@@ -60,8 +69,8 @@ $(() => {
             .html('<i class="fas fa-chevron-circle-down"></i>')
             .attr("class","btn btn-outline-danger col-0  mx-0")
             .click(function()
-            {  
-              tasks.splice(i+1,1,tasks.splice(i,1,tasks[i+1])[0])
+            {  if(i!=tasks.length-1)
+              tasks.splice(i+1,0,tasks.splice(i,1)[0])
                 refreshList()
 
             }
