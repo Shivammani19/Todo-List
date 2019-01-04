@@ -1,0 +1,33 @@
+li .done span {
+  text-decoration: line-through;
+ 
+}
+button{
+  background-color: white;
+}
+.h1{
+    
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-family: 'Pacifico', cursive;
+    font-size: 55px;
+  }
+  .lead {
+    font-size: 1.5rem;
+    font-family:'Pacifico', cursive;
+  }
+  #taskList > li:first-child > .fa-chevron-circle-up {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  #taskList > li:last-child > .fa-chevron-circle-down {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  body{
+    background: -webkit-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #2BC0E4 10%, #EAECC6 90%); /* W3C */
+  }
